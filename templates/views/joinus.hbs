@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAYFIT</title>
+    <link rel="stylesheet" href="css/.css">
+    <script src="src/xyz.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+
+
+    <style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  td {
+    background-color: #ffffff;
+  }
+  tr:nth-child(even) td {
+    background-color: #f8f8f8;
+  }
+</style>
+
+</head>
+<body>
+
+
+{{>home_navbar}}
+
+
+<!-- Contact 1 - Bootstrap Brain Component -->
+<section class="bg-light py-3 py-md-5" id="jform">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+        <h2 class="mb-4 display-5 text-center">Join Us</h2>
+        <p class="text-secondary mb-5 text-center">To get a personalised plan fill this simple form </p>
+        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-lg-center">
+      <div class="col-12 col-lg-9">
+        <div class="bg-white border rounded shadow-sm overflow-hidden">
+
+          <form action="/joinus" method="post" id="joinform">
+            <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+              <div class="col-12">
+                <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="fullname" name="name" value="" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                    </svg>
+                  </span>
+                  <input type="email" class="form-control" id="email" name="email" value="" required>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="phone" class="form-label">Phone Number</label>
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg>
+                  </span>
+                  <input type="tel" class="form-control" id="phone" name="phone" value="">
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="age" class="form-label">Age <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="age" name="age" value="" required>
+              </div>
+
+              <div class="col-12">
+                <label for="height" class="form-label">Height in cms<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="height" name="height" value="" required>
+              </div>
+
+              <div class="col-12">
+                <label for="currweight" class="form-label">Curent Weight in kg<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="currweight" name="currweight" value="" required>
+              </div>
+
+              <div class="col-12">
+                <label for="tarweight" class="form-label">Target Weight in kg<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="tarweight" name="tarweight" value="" required>
+              </div>
+              <div class="col-12">
+                <div class="d-grid">
+                  <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                </div>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+
+<table id="table1" style="display:none">
+    <h2 id="wgws" style="display: none;">Here is your personalised weight gain workout schedule</h2>
+  <tr>
+    <th>Body Part</th>
+    <th>Exercise</th>
+    <th>Sets</th>
+    <th>Reps</th>
+    <th>Weight</th>
+  </tr>
+  <!-- Chest -->
+  <tr>
+    <td rowspan="5">Chest</td>
+    <td>Bench Press</td>
+    <td>4</td>
+    <td>8-10</td>
+    <td>Heavy</td>
+  </tr>
+  <tr>
+    <td>Incline Dumbbell Press</td>
+    <td>4</td>
+    <td>10-12</td>
+    <td>Moderate</td>
+  </tr>
+  <tr>
+    <td>Chest Flyes</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>Light</td>
+  </tr>
+  <tr>
+    <td>Dumbbell Pullover</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>Moderate</td>
+  </tr>
+  <tr>
+    <td>Cable Crossover</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>Light</td>
+  </tr>
+  <!-- Back -->
+  <tr>
+    <td rowspan="5">Back</td>
+    <td>Deadlift</td>
+    <td>4</td>
+    <td>6-8</td>
+    <td>Heavy</td>
+  </tr>
+  <tr>
+    <td>Pull-ups</td>
+    <td>4</td>
+    <td>8-10</td>
+    <td>Bodyweight</td>
+  </tr>
+  <tr>
+    <td>Barbell Rows</td>
+    <td>3</td>
+    <td>8-10</td>
+    <td>Moderate</td>
+  </tr>
+  <tr>
+    <td>Lat Pulldown</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>Moderate</td>
+  </tr>
+  <tr>
+    <td>Dumbbell Rows</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>Moderate</td>
+  </tr>
+  <!-- Arms -->
+  <tr>
+    <td rowspan="4">Arms</td>
+    <td>Barbell Biceps Curls</td>
+    <td>4</td>
+    <td>8-10</td>
+    <td>Moderate</td>
+  </tr>
+  <tr>
+    <td>Triceps Dips</td>
+    <td>4</td>
+    <td>8-10</td>
+    <td>Bodyweight</td>
+  </tr>
+  <tr>
+    <td>Hammer Curls</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>Moderate</td>
+  </tr>
+  <tr>
+    <td>Triceps Pushdown</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>Light</td>
+  </tr>
+  <!-- Shoulders -->
+  <tr>
+    <td rowspan="4">Shoulders</td>
+    <td>Overhead Press</td>
+    <td>4</td>
+    <td>8-10</td>
+    <td>Moderate</td>
+  </tr>
+  <tr>
+    <td>Lateral Raises</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>Light</td>
+  </tr>
+  <tr>
+    <td>Front Raises</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>Light</td>
+  </tr>
+  <tr>
+    <td>Reverse Flyes</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>Light</td>
+  </tr>
+  <!-- Legs -->
+  <tr>
+    <td rowspan="4">Legs</td>
+    <td>Squats</td>
+    <td>4</td>
+    <td>8-10</td>
+    <td>Heavy</td>
+  </tr>
+  <tr>
+    <td>Leg Press</td>
+    <td>4</td>
+    <td>10-12</td>
+    <td>Moderate</td>
+  </tr>
+  <tr>
+    <td>Lunges</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>Moderate</td>
+  </tr>
+  <tr>
+    <td>Leg Curls</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>Moderate</td>
+  </tr>
+  <!-- Abs -->
+  <tr>
+    <td rowspan="4">Abs</td>
+    <td>Crunches</td>
+    <td>4</td>
+    <td>15-20</td>
+    <td>Bodyweight</td>
+  </tr>
+  <tr>
+    <td>Leg Raises</td>
+    <td>4</td>
+    <td>12-15</td>
+    <td>Bodyweight</td>
+  </tr>
+  <tr>
+    <td>Plank</td>
+    <td>3</td>
+    <td>30-60 seconds</td>
+    <td>Bodyweight</td>
+  </tr>
+  
+  </table>
+
+  <hr>
+
+
+  <table id="weightgaindiet" style="display: none;">
+    <h2 id="wgds" style="display: none;">Diet plan for weight gain</h2>
+  <tr>
+    <th>Meal</th>
+    <th>Food Items</th>
+    <th>Portion Size</th>
+    <th>Calories</th>
+  </tr>
+  <!-- Breakfast -->
+  <tr>
+    <td>Breakfast</td>
+    <td>
+      Scrambled eggs<br>
+      Whole wheat toast<br>
+      Avocado<br>
+      Banana
+    </td>
+    <td>
+      2 eggs<br>
+      2 slices<br>
+      1/2 avocado<br>
+      1 medium
+    </td>
+    <td>Approx. 600 calories</td>
+  </tr>
+  <!-- Lunch -->
+  <tr>
+    <td>Lunch</td>
+    <td>
+      Grilled chicken breast<br>
+      Brown rice<br>
+      Steamed vegetables<br>
+      Greek yogurt
+    </td>
+    <td>
+      6 oz<br>
+      1 cup<br>
+      1 cup<br>
+      1 cup
+    </td>
+    <td>Approx. 700 calories</td>
+  </tr>
+  <!-- Evening Meal -->
+  <tr>
+    <td>Evening Meal</td>
+    <td>
+      Salmon fillet<br>
+      Quinoa<br>
+      Mixed greens salad with olive oil dressing<br>
+      Whole grain bread
+    </td>
+    <td>
+      6 oz<br>
+      1 cup<br>
+      1 serving<br>
+      2 slices
+    </td>
+    <td>Approx. 800 calories</td>
+  </tr>
+  <!-- Dinner -->
+  <tr>
+    <td>Dinner</td>
+    <td>
+      Beef steak<br>
+      Sweet potato<br>
+      Broccoli<br>
+      Mixed berries
+    </td>
+    <td>
+      8 oz<br>
+      1 medium<br>
+      1 cup<br>
+      1 cup
+    </td>
+    <td>Approx. 900 calories</td>
+  </tr>
+  <!-- Total Calories -->
+  <tr>
+    <td colspan="3"><strong>Total Calories</strong></td>
+    <td><strong>Approx. 3000 calories</strong></td>
+  </tr>
+</table>
+   
+<!------ for weight loss  ----->
+<table id="table2" style="display: none;">
+    <h2 id="wlws" style="display: none;">Here is your personalised weight loss workout schedule</h2>
+  <tr>
+    <th>Body Part</th>
+    <th>Exercise</th>
+    <th>Sets</th>
+    <th>Reps</th>
+    <th>Rest</th>
+  </tr>
+  <!-- Chest -->
+  <tr>
+    <td rowspan="5">Chest</td>
+    <td>Push-ups</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Incline Dumbbell Press</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Chest Flyes</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Dumbbell Pullover</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Cable Crossover</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <!-- Back -->
+  <tr>
+    <td rowspan="5">Back</td>
+    <td>Deadlift</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Pull-ups</td>
+    <td>3</td>
+    <td>8-10</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Lat Pulldown</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Dumbbell Rows</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Back Extensions</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <!-- Arms -->
+  <tr>
+    <td rowspan="4">Arms</td>
+    <td>Bodyweight Triceps Dips</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Bodyweight Biceps Curls</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Triceps Pushdown</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Hammer Curls</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <!-- Shoulders -->
+  <tr>
+    <td rowspan="4">Shoulders</td>
+    <td>Arnold Press</td>
+    <td>3</td>
+    <td>10-12</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Lateral Raises</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Front Raises</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Reverse Flyes</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <!-- Legs -->
+  <tr>
+    <td rowspan="4">Legs</td>
+    <td>Bodyweight Squats</td>
+    <td>3</td>
+    <td>15-20</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Walking Lunges</td>
+    <td>3</td>
+    <td>12-15 each leg</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Jump Squats</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Leg Press Machine</td>
+    <td>3</td>
+    <td>12-15</td>
+    <td>60 sec</td>
+  </tr>
+  <!-- Abs -->
+  <tr>
+    <td rowspan="4">Abs</td>
+    <td>Bicycle Crunches</td>
+    <td>3</td>
+    <td>15-20 each side</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Plank</td>
+    <td>3</td>
+    <td>30-60 seconds</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Mountain Climbers</td>
+    <td>3</td>
+    <td>12-15 each leg</td>
+    <td>60 sec</td>
+  </tr>
+  <tr>
+    <td>Reverse Crunches</td>
+    <td>3</td>
+    <td>15-20</td>
+    <td>60 sec</td>
+  </tr>
+</table>
+<hr>
+<table id="weightlossdiet" style="display: none;">
+    <h2 id="wlds" style="display: none;">Deit plan for weight loss</h2>
+    <tr>
+        <th>Meal</th>
+        <th>Food</th>
+        <th>Calories</th>
+    </tr>
+    <tr>
+        <td>Breakfast</td>
+        <td>Whole grain toast with avocado and poached eggs</td>
+        <td>350</td>
+    </tr>
+    <tr>
+        <td>Lunch</td>
+        <td>Grilled chicken breast with quinoa and steamed vegetables</td>
+        <td>400</td>
+    </tr>
+    <tr>
+        <td>Evening Meal</td>
+        <td>Greek yogurt with mixed berries and a drizzle of honey</td>
+        <td>200</td>
+    </tr>
+    <tr>
+        <td>Dinner</td>
+        <td>Baked salmon with sweet potato and asparagus</td>
+        <td>450</td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align: right;">Total Calories:</td>
+        <td>1800</td>
+    </tr>
+</table>
+
+
+<div id="trainer-cont" style="display: none;">
+  <center> <a href="/usertrainers" class="btn btn-primary">Trainers</a></center>
+</div>
+
+<script>
+
+
+  
+    
+document.getElementById("joinform").addEventListener("submit", function(event) {
+
+  // Get the values of variables a and b from the form
+  let a = parseFloat(document.getElementById("currweight").value);
+  let b = parseFloat(document.getElementById("tarweight").value);
+
+  // Show table X if a is less than b, otherwise show table Y
+  if (a < b) {
+    document.getElementById("table1").style.display = "table";
+    document.getElementById("wgws").style.display = "flex";
+    document.getElementById("wgds").style.display = "flex";
+    document.getElementById("weightgaindiet").style.display = "table";
+    document.getElementById("table2").style.display = "none";
+    document.getElementById("wlws").style.display = "none";
+    document.getElementById("wlds").style.display = "none";
+    document.getElementById("weightlossdiet").style.display = "none";
+    document.getElementById("trainer-cont").style.display = "flex";
+
+
+  } else {
+    document.getElementById("table1").style.display = "none";
+    document.getElementById("wgws").style.display = "none";
+    document.getElementById("wgds").style.display = "none";
+    document.getElementById("weightgaindiet").style.display = "none";
+    document.getElementById("table2").style.display = "table";
+    document.getElementById("wlws").style.display = "flex";
+    document.getElementById("wlds").style.display = "flex";
+    document.getElementById("weightlossdiet").style.display = "table";
+    document.getElementById("trainer-cont").style.display = "flex";
+
+  }
+
+});
+
+</script>
+
+
+
+</body>
+</html>

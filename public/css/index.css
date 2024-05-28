@@ -1,0 +1,73 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    margin-top: 10px;
+}
+
+.counter-box {
+    display: block;
+    background: #f6f6f6;
+    padding: 40px 20px 37px;
+    text-align: center
+}
+
+.counter-box p {
+    margin: 5px 0 0;
+    padding: 0;
+    color: #909090;
+    font-size: 18px;
+    font-weight: 500
+}
+
+.counter-box i {
+    font-size: 60px;
+    margin: 0 0 15px;
+    color: #d2d2d2
+}
+
+.counter {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #666;
+    line-height: 28px
+}
+
+.counter-box.colored {
+    background: #3acf87;
+}
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+    color: #fff
+}
+
+
+
+label {
+    color: #333;
+}
+
+.btn-send {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    width: 80%;
+    margin-left: 3px;
+}
+
+.help-block.with-errors {
+    color: #ff5050;
+    margin-top: 5px;
+
+}
+
+.card {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
